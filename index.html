@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <title>滚动式进度条</title>
+  <style>
+    .process-bar{
+      width: 600px;
+      height:20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #ddd;
+      margin:50px auto;
+    }
+    .process-val{
+      width: 400px;
+      height: 20px;
+      background: repeating-linear-gradient(45deg ,#99ccff 0px,#99ccff 15px, #0099cc 15px,#0099cc 30px) ;
+      background-size: 42px 20px;
+      /*background-repeat: no-repeat;*/
+      /*background-position:0px;!*可以通过它设置背景图的位置*!*/
+      animation: progress-striped 1s linear 0s infinite normal both;
+    }
+    /*CSS中的关键帧动画*/
+    @keyframes progress-striped {
+      from{background-position: 42px 0px}
+      to{background-position: 0px 0px}
+    }
+  </style>
+</head>
+<body>
+  <div class="process-bar">
+    <div class="process-val"></div>
+  </div>
+</body>
+</html>
